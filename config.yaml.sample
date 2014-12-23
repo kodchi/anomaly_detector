@@ -1,0 +1,18 @@
+email:
+    host: smtp.gmail.com
+    port: 587
+    user: SOME_ADDRESS@gmail.com
+    password: SOME_PASSWORD
+    subject: "Anomaly Detected!!!"
+    recipients: [
+        RECIPIENT1@gmail.com,
+        RECIPIENT2@gmail.com
+    ]
+
+input:
+    path: /some/path/
+    data: [
+        [GRAPH_NAME, file1.csv],
+        [GRAPH_NAME, file2.csv]
+    ]
+
