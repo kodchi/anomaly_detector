@@ -3,7 +3,7 @@
 Detect anomalies using exponentially-weighted moving averages and standard deviations.
 
 ### About
-* Tested with python 3.4
+* Tested with python 2.7.6
 * It's assumed that there is a column called 'Day' in each csv file.
 
 ### How to
@@ -16,5 +16,13 @@ $ pip install -r requirements.txt
 
 * ````$ python detect.py````
 
-* Since only the last value in each time series is checked whether
- it's an anomaly, this script is more useful when setup as a cron job.
+* The script generates two csv files for each input file: one with forecasted values,
+ the other with Mean Absolute Percentage Error (between actual and forecasted values).
+ 
+* The last value for Mean Absolute Percentage Error is then compared the the error threshold.
+ Errors that are bigger than the threshold are considered anomalies and emailed to recipients.
+ 
+ 
+### More info
+* https://pythonhosted.org/pycast/methods/forecastingmethods.html
+* http://static.usenix.org/events/lisa00/full_papers/brutlag/brutlag_html/

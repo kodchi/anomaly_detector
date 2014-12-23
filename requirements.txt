@@ -1,6 +1,2 @@
-numpy==1.9.1
-pandas==0.15.2
-python-dateutil==2.3
-pytz==2014.10
+pycast==0.1.4a0
 PyYAML==3.11
-six==1.8.0

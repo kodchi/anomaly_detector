@@ -2,17 +2,19 @@ email:
     host: smtp.gmail.com
     port: 587
     user: SOME_ADDRESS@gmail.com
-    password: SOME_PASSWORD
-    subject: "Anomaly Detected!!!"
+    password: "EMAIL PASSWORD"
+    subject: "EMAIL SUBJECT"
     recipients: [
-        RECIPIENT1@gmail.com,
-        RECIPIENT2@gmail.com
+        recipient_one@gmail.com,
+        recipient_two@gmail.com
     ]
 
 input:
-    path: /some/path/
     data: [
-        [GRAPH_NAME, file1.csv],
-        [GRAPH_NAME, file2.csv]
+        "http://datasets.wikimedia.org/limn-public-data/mobile/datafiles/ui-daily-historic.csv"
     ]
 
+output:
+    path: datafiles  # folder where generated CSV files are saved
+
+error_threshold: 10  # value is an anomaly if there is at least 10% difference between the actual and forecasted values
