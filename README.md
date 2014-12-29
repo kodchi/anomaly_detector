@@ -1,20 +1,17 @@
 # Anomaly Detector
 
-Detect anomalies using exponentially-weighted moving averages and standard deviations.
+Detect anomalies using the Holt-Winters Method.
 
 ### About
 * Tested with python 2.7.6
 * It's assumed that there is a column called 'Day' in each csv file.
 
 ### How to
-* Install requirements
-````
-$ pip install -r requirements.txt
-````
+* Install requirements: ````$ pip install -r requirements.txt````
 
 * Rename the file config.yaml.sample to config.yaml and update it.
 
-* ````$ python detect.py````
+* Run the script: ````$ python detect.py````
 
 * The script generates two csv files for each input file: one with forecasted values,
  the other with Mean Absolute Percentage Error (between actual and forecasted values).
