@@ -9,6 +9,8 @@ Detect anomalies using the Holt-Winters Method.
 ### How to
 * Install requirements: ````$ pip install -r requirements.txt````
 
+* Install pycast from github: ````$ pip install https://github.com/T-002/pycast/zipball/master````
+
 * Rename the file config.yaml.sample to config.yaml and update it.
 
 * Run the script: ````$ python detect.py````
